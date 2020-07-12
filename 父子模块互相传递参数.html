@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <title>Hello React!</title>
+  <script src="./dist/react.development.js"></script>
+  <script src="./dist/react-dom.development.js"></script>
+  <script src="./dist/babel.js"></script>
+  <script src="https://cdn.bootcss.com/prop-types/15.6.1/prop-types.js"></script>
+
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="text/babel">
+    // 首字母需要大写,防止与HTML 元素标签冲突
+    class Parent extends React.Component {
+      constructor() {
+        super()
+        // 记住  是 state   不是   states    血的教训
+        this.state = { age: 1 }
+      }
+      clickBtn(desc) {
+        // 改变 state的值需要使用setState()方法。跟小程序的设置数据有点像
+        // 可行
+        // this.setState({age:1 + this.state.age})
+        this.setState(prevState => ({
+          age: prevState.age + 1
+        }));
+        // this.setState(function(prevState){
+        //   console.log(prevState)
+        //   return { age: prevState.age++}
+        // })
+        // console.log(this.state)
+
+        // 使用对象  失败 这种情况相当于使用函数
+        // this.setState({age: this.state.age++})
+
+        // 使用函数  失败  https://blog.csdn.net/zrq1210/article/details/101719694
+        // https://blog.csdn.net/zrq1210/article/details/103781692
+        // this.setState(() => ({age: this.state.age++}),()=>{
+        //   this.state.age++
+        //   console.log(this.state) //1
+        // });
+        // console.log(this.state)  //2   一般  用于  此次state的改变，需要依赖上一次改变的值
+
+      }
+      changeAge(event) {
+        event.persist()
+        console.log('我修改了输入框的值', event, event.target.value, this)
+        this.setState({ age: Number(event.target.value) })
+      }
+      render() {
+        return <div>
+          <button onClick={() => this.clickBtn('我被点击了')}>点击</button>
+          <b style={{ marginLeft: 10 }}>{this.state.age}</b>
+          <br />
+          {/*注释：子组件 Children*/}
+          <Children changeAge={this.changeAge.bind(this)} val={this.state.age} />
+        </div>
+      }
+    }
+
+
+
+    class Children extends React.Component {
+      componentDidMount() {
+        // console.log('这个是生命周期函数', this.props, this)
+      }
+      render() {
+        return <div><input type="text" value={this.props.val} onChange={this.props.changeAge} /></div>
+      }
+    }
+    // 父传子的值设置默认值
+    Children.defaultProps = {
+      val: 1
+    }
+    // 父传子的值设置类型
+    Children.propTypes = {
+      val: PropTypes.number.isRequired
+    }
+    ReactDOM.render(<Parent />, document.getElementById('root'))
+  </script>
+</body>
+
+</html>
