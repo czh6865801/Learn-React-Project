@@ -20,9 +20,11 @@
       constructor() {
         super();
         this.state = { username: 1 }; //可以传json等很多格式（这个是初始化赋值）
+        this.changeAge = this.changeAge.bind(this)
       }
       //click事件函数
-      changeAge() {
+      changeAge (val) {
+        console.log(val)
         this.setState({ username: 1 + this.state.username })
       }
       //change事件函数
@@ -34,7 +36,7 @@
           <div>
             <h1>下面的操作有惊喜</h1>
             <p>{this.state.username}</p>
-            <input type="button" value="点击改变username" onClick={() => this.changeAge()} />
+            <input type="button" value="点击改变username" onClick={()=>this.changeAge(12)} />
             <BodyChild changeUsername={this.changeUsername.bind(this)} getname={this.state.username} />
           </div>
         )

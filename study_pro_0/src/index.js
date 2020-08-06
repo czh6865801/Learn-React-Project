@@ -3,8 +3,7 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
-const q = <h1 ref="chenzhihua" className="name" age="18" key="chen">陈志华</h1>;
-console.log(q)
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
