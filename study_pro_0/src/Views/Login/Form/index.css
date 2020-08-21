@@ -6,38 +6,3 @@
   width: 100%;
 }
 
-a:hover {
-  color: white;
-}
-
-.login-form-forgot {
-  color: white;
-}
-
-.ant-form-item-has-error .ant-input:focus, .ant-form-item-has-error .ant-input-affix-wrapper:focus, .ant-form-item-has-error .ant-input-focused, .ant-form-item-has-error .ant-input-affix-wrapper-focused {
-  border-color: unset;
-  border-right-width: 1px !important;
-  outline: 0;
-  box-shadow: unset;
-}
-
-.ant-form-item-has-error .ant-form-item-explain, .ant-form-item-has-error .ant-form-item-split {
-  color: #ffffff;
-}
-
-.ant-input {
-  background-color: transparent;
-  color: white;
-}
-
-.site-form-item-icon {
-  color: white;
-}
-
-.ant-input-password-icon {
-  color: white;
-}
-
-.ant-input-password-icon:hover {
-  color: white;
-}
