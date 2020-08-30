@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-// import Login from './Views/Login';
 import Router from './Routes';
 import * as serviceWorker from './serviceWorker';
 
