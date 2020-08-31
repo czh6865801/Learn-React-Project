@@ -3,6 +3,9 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import Router from './Routes';
 import * as serviceWorker from './serviceWorker';
+import api from './Api'
+
+React.$api = api
 
 ReactDOM.render(
   <Router />,

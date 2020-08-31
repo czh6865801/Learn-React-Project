@@ -1,6 +1,6 @@
-import { Message } from 'element-ui'
-import store from '@/store'
-import util from '@/libs/util'
+// import { Message } from 'element-ui'
+// import store from '@/store'
+// import util from '@/libs/util'
 
 /**
  * @description 安全地解析 json 字符串
@@ -55,24 +55,24 @@ export function responseError (data = {}, msg = '请求失败', code = 500) {
  */
 export function errorLog (error) {
   // 添加到日志
-  store.dispatch('d2admin/log/push', {
-    message: '数据请求异常',
-    type: 'danger',
-    meta: {
-      error
-    }
-  })
+  // store.dispatch('d2admin/log/push', {
+  //   message: '数据请求异常',
+  //   type: 'danger',
+  //   meta: {
+  //     error
+  //   }
+  // })
   // 打印到控制台
   if (process.env.NODE_ENV === 'development') {
-    util.log.danger('>>>>>> Error >>>>>>')
+    // util.log.danger('>>>>>> Error >>>>>>')
     console.log(error)
   }
   // 显示提示
-  Message({
-    message: error.message,
-    type: 'error',
-    duration: 5 * 1000
-  })
+  // Message({
+  //   message: error.message,
+  //   type: 'error',
+  //   duration: 5 * 1000
+  // })
 }
 
 /**

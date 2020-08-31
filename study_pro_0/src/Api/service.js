@@ -1,7 +1,7 @@
 import axios from 'axios'
 import Adapter from 'axios-mock-adapter'
 import { get } from 'lodash'
-import util from '@/libs/util'
+import util from '@/Libs/util'
 import { errorLog, errorCreate } from './tools'
 
 /**

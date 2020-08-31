@@ -9,8 +9,8 @@ class Login extends React.Component {
     }
   }
   submit = (val) => {
-    console.log(val)
-    this.props.history.push('/Layout')
+    console.log(React)
+    // this.props.history.push('/Layout')
   }
   render () {
     return (
