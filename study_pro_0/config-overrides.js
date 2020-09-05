@@ -1,16 +1,17 @@
 const path = require('path')
 
-function resolve (dir) {
+function resolve(dir) {
   return path.join(__dirname, '.', dir)
 }
 
-/* config-overrides.js */
-module.exports = function override(config, env) {
-  //do stuff with the webpack config...
-  // alias
-  config.resolve.alias = {
-    ...config.resolve.alias,
-    '@': resolve('./src')
-  };
-  return config;
+module.exports = {
+  webpack: function (config, env) {
+    config.resolve.alias = {
+      ...config.resolve.alias,
+      '@': resolve('./src')
+    };
+    // console.log(config)
+    // console.log(env)
+    return config;
+  }
 }
