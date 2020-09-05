@@ -1,0 +1,10 @@
+{
+  // 开发环境下配置项
+  "env": {
+    "development": {
+      "plugins": [
+        "dynamic-import-node"
+      ]
+    }
+  }
+}

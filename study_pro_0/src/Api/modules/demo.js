@@ -8,6 +8,12 @@ const businessIssue142Db = [
 ]
 
 export default ({ service, request, serviceForMock, requestForMock, mock, faker, tools }) => ({
+  WEATHER () {
+    return request({
+      url: '/api/101320101.html',
+      method: 'get'
+    })
+  },
   /**
    * @description https://d2.pub/d2-admin/preview/#/demo/business/issues/142
    * @description 列表

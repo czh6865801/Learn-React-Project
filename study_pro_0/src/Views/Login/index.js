@@ -9,8 +9,10 @@ class Login extends React.Component {
     }
   }
   submit = (val) => {
-    console.log(React)
-    // this.props.history.push('/Layout')
+    React.$api.WEATHER().then(res=>{
+      console.log(res)
+    })
+    this.props.history.push('/Layout')
   }
   render () {
     return (

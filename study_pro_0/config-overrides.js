@@ -1,3 +1,11 @@
+const {
+  override,
+  addDecoratorsLegacy,
+  disableEsLint,
+  addBundleVisualizer,
+  addWebpackAlias,
+  adjustWorkbox
+} = require("customize-cra")
 const path = require('path')
 
 function resolve(dir) {
@@ -15,3 +23,11 @@ module.exports = {
     return config;
   }
 }
+// 这种方式也可以
+// module.exports = {
+//   webpack: override(
+//     addWebpackAlias({
+//       ["@"]: path.resolve(__dirname, "src")
+//     })
+//   )
+// }
