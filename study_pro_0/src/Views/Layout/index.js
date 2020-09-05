@@ -1,9 +1,9 @@
 import React from 'react';
-import './index.css';
+import './index.less';
 
 function Layout() {
   return (
-    <div>
+    <div className="qqq">
       3123
     </div>
   )

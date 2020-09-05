@@ -13,7 +13,7 @@
     "http-proxy-middleware": "^1.0.5",
     "js-cookie": "^2.2.1",
     "less": "^3.12.2",
-    "less-loader": "^7.0.1",
+    "less-loader": "5.0.0",
     "lodash": "^4.17.20",
     "lowdb": "^1.0.0",
     "react": "^16.13.1",
