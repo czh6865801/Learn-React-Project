@@ -1,6 +1,7 @@
 const {
   override,
   addLessLoader,
+  fixBabelImports,
   addWebpackAlias,
 } = require("customize-cra")
 const path = require('path')
@@ -29,13 +30,16 @@ module.exports = {
     addWebpackAlias({
       ["@"]: path.resolve(__dirname, "src")
     }),
+    fixBabelImports("import", {
+      libraryName: "antd",
+      libraryDirectory: "es",
+      style: true,
+    }),
     // 添加less支持
     addLessLoader({
-      strictMath: true,
-      noIeCompat: true,
       javascriptEnabled: true,
       modifyVars: {
-        '@primary-color': '#1DA57A'
+        '@primary-color': '#1890FF'
       }
     })
   )
