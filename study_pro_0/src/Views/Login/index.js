@@ -9,12 +9,17 @@ class Login extends React.Component {
     }
   }
   submit = (val) => {
-    React.$api.WEATHER().then(res=>{
+    React.$api.WEATHER().then(res => {
       console.log(res)
     })
-    this.props.history.push('/Layout')
+    this.props.history.push({
+      pathname: '/Layout',
+      query: {
+        message: '已登录成功'
+      }
+    })
   }
-  render () {
+  render() {
     return (
       <div className="Login" id="qq" >
         <div className="login-form-content">
