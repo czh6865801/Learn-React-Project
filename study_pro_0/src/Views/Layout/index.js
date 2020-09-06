@@ -29,7 +29,7 @@ function Layout(props) {
       </section>
       <section className="layout-right">
         <div className="logo-icon">
-          <img className="logo-img" src="/Images/logo.svg" />
+          <img className="logo-img" alt="icon" src="/Images/logo.svg" />
           <h1 className="logo-name">Ant Design Pro</h1>
         </div>
         <header className="header">
