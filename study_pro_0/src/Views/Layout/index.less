@@ -1,5 +1,73 @@
 
-@color: red;
-.qqq {
-    color: @color;
+.layout {
+  display: flex;
+  width: 100%;
+  min-height: 100%;
+  background-color: #f0f2f5;
+}
+.layout-left {
+  width: 208px;
+  position: relative;
+  background-color: #fff;
+  padding-top: 48px;
+  overflow: hidden;
+}
+.layout-right {
+  flex: 1;
+}
+.aside {
+  position: fixed;
+  width: 208px;
+  height: calc(100% - 48px);
+  overflow: auto;
+  color: #000000a6;
+}
+.layout-left ::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+.layout-left ::-webkit-scrollbar-thumb {
+  background: rgba(0,0,0,.12);
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px rgba(0,21,41,.05);
+}
+.layout-left ::-webkit-scrollbar-track {
+  background: #ffffffa6;
+  border-radius: 3px;
+  box-shadow: inset 0 0 5px rgba(0,21,41,.05);
+}
+.logo-icon {
+  position: fixed;
+  left: 0;
+  width: 208px;
+  height: 48px;
+  background-color: #001529;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  justify-content: space-between;
+}
+.logo-img {
+  width: 32px;
+}
+.logo-name {
+  color: #fff;
+  margin: 0;
+  font-size: 18px;
+}
+.header {
+  height: 48px;
+  color: #ffffffa6;
+  background-color: #001529;
+  line-height: 48px;
+  position: fixed;
+  width: 100%;
+}
+.main {
+  padding-top: 48px;
+}
+.main-body {
+  background-color: #fff;
+  margin: 0 24px;
+  margin-top: 24px;
 }
