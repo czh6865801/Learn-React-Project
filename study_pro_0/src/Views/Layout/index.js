@@ -39,23 +39,25 @@ function Layout(props) {
 
         </aside>
         <main className="main">
-          可以移动<br />
-          可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
-                可以移动<br />
+          <div className="main-body">
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+              可以移动<br />
+          </div>
         </main>
       </section>
     </div>
