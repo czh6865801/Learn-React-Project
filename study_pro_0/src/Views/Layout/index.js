@@ -133,7 +133,7 @@ class Layouts extends React.Component {
                   overflow: 'auto'
                 }}
               >
-                Content <br></br>
+                git <br></br>
                 Content <br></br>
                 Content <br></br>
                 Content <br></br>
